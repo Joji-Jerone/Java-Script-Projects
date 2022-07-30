@@ -145,7 +145,7 @@ const playlistData = [
     }
   ]
 
-
+const playerBaseURL = "https://player.vimeo.com/video/"
 $(document).ready(function() {
     function createPlaylistCard(obj) {
         // <div id="card3" class="playlist-card">
@@ -178,4 +178,8 @@ $(document).ready(function() {
         playlistWrapper.append(playlistCard);
 
     }
-});
+
+    //Show the video dynamically
+    const player = $("#video-player");
+    player.attr("src", playerBaseURL + videoPlaySectionData[0].vimeoId);
+  });
